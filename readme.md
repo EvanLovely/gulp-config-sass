@@ -42,3 +42,12 @@ A more complete `gulpfile.js` would look like:
     gulp.task('compile', tasks.compile);
     gulp.task('validate', tasks.validate);
     gulp.task('watch', tasks.watch);
+
+# Modifying this file and using it as a starting point
+
+Just copy `index.js` out and put it in your repo, rename it to `sass.js` and put it perhaps in a `gulp-tasks/` folder. Then add this to `gulpfile.js`:
+
+    require('gulp-tasks/sass.js')(gulp, config, tasks);
+
+Then just install all the packages listed at the top of that file with the `npm install {name of packages} --save` command. Now you can modify this file any way you want!
+

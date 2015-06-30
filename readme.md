@@ -14,7 +14,7 @@ Add this to `gulpfile.js`:
 
     require('gulp-config-sass')(gulp, config, tasks);
 
-The above line will pull in `index.js` just like it was in your `gulpfile.js` and it'll register and configure all the gulp tasks for you. 
+The above line will pull in [`index.js`](https://github.com/EvanLovely/gulp-config-sass/blob/master/index.js) just like it was in your `gulpfile.js` and it'll register and configure all the gulp tasks for you. 
 
 A more complete `gulpfile.js` would look like:
 

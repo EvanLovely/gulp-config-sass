@@ -43,6 +43,12 @@ A more complete `gulpfile.js` would look like:
     gulp.task('validate', tasks.validate);
     gulp.task('watch', tasks.watch);
 
+# Task commands
+
+- `gulp css` - Compile sass and run through autoprefixer. Creates sourcemaps that are inlined into `style.css`.
+- `gulp scsslint` - Check your scss for errors and warnings based on the rules you set in `.scss-lint-yml` (get a [sample file here](https://github.com/brigade/scss-lint/blob/master/config/default.yml) and see the [docs here](https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/README.md)).
+- `gulp watch:css` - Compile Sass, then watch for changes, then compile and run scss lint. 
+
 # Modifying this file and using it as a starting point
 
 Just copy `index.js` out and put it in your repo, rename it to `sass.js` and put it perhaps in a `gulp-tasks/` folder. Then add this to `gulpfile.js`:

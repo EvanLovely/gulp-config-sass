@@ -1,0 +1,34 @@
+{
+  "name": "gulp-config-sass",
+  "version": "1.0.0",
+  "description": "Configures gulp for Sass compiling",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvanLovely/gulp-config-sass.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "css",
+    "gulp",
+    "gulp-config",
+    "front-end"
+  ],
+  "author": "Evan Lovely",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EvanLovely/gulp-config-sass/issues"
+  },
+  "homepage": "https://github.com/EvanLovely/gulp-config-sass#readme",
+  "dependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "gulp": "^3.9.0",
+    "gulp-postcss": "^5.1.9",
+    "gulp-sass": "^2.0.3",
+    "gulp-scss-lint": "^0.2.0"
+  }
+}

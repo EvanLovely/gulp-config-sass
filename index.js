@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer-core');
+var cache = require('gulp-cached');
 var scsslint = require('gulp-scss-lint');
 
 module.exports = function (gulp, config, tasks) {
@@ -15,7 +16,7 @@ module.exports = function (gulp, config, tasks) {
   if (tasks.validate) {
     tasks.validate.push('scsslint');
   }
-  
+
   var scssDir = config.scssDir || "scss/";
   var cssDir = config.cssDir || "./css";
   var autoprefixerOptions = config.autoprefixerOptions || {
@@ -27,7 +28,7 @@ module.exports = function (gulp, config, tasks) {
     'config': '.scss-lint.yml',
     'bundleExec': true
   };
-  
+
   gulp.task('css', function () {
     return gulp.src(scssDir + '**/*.scss')
       .pipe(sourcemaps.init())
@@ -52,6 +53,7 @@ module.exports = function (gulp, config, tasks) {
 
   gulp.task('scsslint', function () {
     return gulp.src(scssDir + '**/*.scss')
+      .pipe(cache('scsslint'))
       .pipe(scsslint(scsslintOptions));
   });
 
